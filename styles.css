@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url('https://pikwizard.com/pw/small/3de5b09ec958cd067233ac24ee125199.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,12 +9,14 @@ body {
 }
 
 .container {
-    background-color: white;
+    background-image: url('https://img.freepik.com/free-photo/time-organization-concept-close-up_23-2149046744.jpg');
+    height: auto;
+    width: 500px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
+    
 }
 
 input[type="text"] {
@@ -27,7 +29,7 @@ input[type="text"] {
 
 button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #ab74c7;
     color: white;
     border: none;
     border-radius: 5px;

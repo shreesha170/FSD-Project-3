@@ -19,7 +19,7 @@ function addTask() {
     taskInput.value = "";
 }
 
-function clearCompletedTasks() {
+function clearTasks() {
     const taskList = document.getElementById('taskList');
     const tasks = taskList.getElementsByTagName('li');
     
