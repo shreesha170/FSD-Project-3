@@ -1,5 +1,5 @@
 body {
-    /* background-image: url('https://pikwizard.com/pw/small/3de5b09ec958cd067233ac24ee125199.jpg'); */
+    background-image: url('https://pikwizard.com/pw/small/3de5b09ec958cd067233ac24ee125199.jpg');
     font-family: Arial, sans-serif;
     /* background-color: #f4f4f4; */
     display: flex;
@@ -7,7 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to right, #5ffffa, #feb47b, #ffb6c1, #ff69b4);
+    /* background: linear-gradient(to right, #5ffffa, #feb47b, #ffb6c1, #ff69b4); */
 }
 
 .container {
