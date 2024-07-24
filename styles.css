@@ -1,18 +1,18 @@
 body {
     background-image: url('https://pikwizard.com/pw/small/3de5b09ec958cd067233ac24ee125199.jpg');
     font-family: Arial, sans-serif;
-    /* background-color: #f4f4f4; */
+    /* background-image: url('https://t3.ftcdn.net/jpg/05/13/59/72/360_F_513597277_YYqrogAmgRR9ohwTUnOM784zS9eYUcSk.jpg'); */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    /* background: linear-gradient(to right, #5ffffa, #feb47b, #ffb6c1, #ff69b4); */
+    /* */
 }
 
 .container {
-    background-image: url('https://img.freepik.com/free-photo/time-organization-concept-close-up_23-2149046744.jpg');
-    /* background-color: #fff; */
+    /* background-image: url('https://img.freepik.com/free-photo/time-organization-concept-close-up_23-2149046744.jpg'); */
+    background: linear-gradient(to right, #5ffffa, #ffb6c1, #ff69b4); 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
