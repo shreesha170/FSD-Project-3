@@ -1,63 +1,98 @@
 body {
+    /* background-image: url('https://pikwizard.com/pw/small/3de5b09ec958cd067233ac24ee125199.jpg'); */
     font-family: Arial, sans-serif;
-    background-image: url('https://pikwizard.com/pw/small/3de5b09ec958cd067233ac24ee125199.jpg');
+    /* background-color: #f4f4f4; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #ffb6c1, #ff69b4);
 }
 
 .container {
     background-image: url('https://img.freepik.com/free-photo/time-organization-concept-close-up_23-2149046744.jpg');
-    height: auto;
-    width: 500px;
+    /* background-color: #fff; */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
     text-align: center;
-    
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.input-section {
+    display: flex;
+    justify-content: space-between;
 }
 
 input[type="text"] {
-    width: calc(100% - 22px);
+    flex: 1;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-right: 10px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #ab74c7;
-    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    margin: 5px 0;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+button#addTaskButton {
+    background-color: #e17dc9;
+    /* background-color: #ae9ab9; */
+    color: white;
+}
+
+button#addTaskButton:hover {
+    background-color: #218838;
+}
+
+button#clearCompletedButton {
+    margin-top: 20px;
+    background-color: #e17dc9;
+    color: white;
+}
+
+button#clearCompletedButton:hover {
+    background-color: #c82333;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    max-height: 300px;
-    overflow-y: auto;
+    margin: 20px 0;
 }
 
 li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 li.completed {
     text-decoration: line-through;
-    color: gray;
+    background-color: #d4edda;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#taskPrompt {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
 }

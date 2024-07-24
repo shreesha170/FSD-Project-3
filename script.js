@@ -1,34 +1,53 @@
-function addTask() {
+document.addEventListener('DOMContentLoaded', function() {
     const taskInput = document.getElementById('taskInput');
-    const taskText = taskInput.value.trim();
-    
-    if (taskText === "") {
-        alert("Please enter a task.");
-        return;
-    }
-
+    const addTaskButton = document.getElementById('addTaskButton');
     const taskList = document.getElementById('taskList');
-    const taskItem = document.createElement('li');
-    taskItem.textContent = taskText;
+    const clearCompletedButton = document.getElementById('clearCompletedButton');
+    const taskPrompt = document.getElementById('taskPrompt');
 
-    taskItem.addEventListener('click', function() {
-        taskItem.classList.toggle('completed');
-    });
+    function updateTaskPrompt() {
+        const tasks = taskList.getElementsByTagName('li');
+        const remainingTasks = Array.from(tasks).filter(task => !task.classList.contains('completed')).length;
 
-    taskList.appendChild(taskItem);
-    taskInput.value = "";
-}
-
-function clearTasks() {
-    const taskList = document.getElementById('taskList');
-    const tasks = taskList.getElementsByTagName('li');
-    
-    for (let i = tasks.length - 1; i >= 0; i--) {
-        if (tasks[i].classList.contains('completed')) {
-            taskList.removeChild(tasks[i]);
+        if (remainingTasks > 0) {
+            taskPrompt.textContent = `You have ${remainingTasks} tasks to do.`;
+        } else {
+            taskPrompt.textContent = 'Congratulations, you have completed all tasks!';
         }
     }
-}
 
-// Example usage
-console.log("To-Do List Application is ready!");
+    addTaskButton.addEventListener('click', function() {
+        const taskText = taskInput.value.trim();
+        if (taskText !== '') {
+            const listItem = document.createElement('li');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                    listItem.classList.add('completed');
+                } else {
+                    listItem.classList.remove('completed');
+                }
+                updateTaskPrompt();
+            });
+
+            listItem.appendChild(checkbox);
+            listItem.appendChild(document.createTextNode(taskText));
+            taskList.appendChild(listItem);
+            taskInput.value = '';
+            updateTaskPrompt();
+        }
+    });
+
+    clearCompletedButton.addEventListener('click', function() {
+        const completedTasks = taskList.querySelectorAll('.completed');
+        completedTasks.forEach(function(task) {
+            task.remove();
+        });
+        updateTaskPrompt();
+    });
+
+    updateTaskPrompt();
+});
+
+
